@@ -12,6 +12,8 @@ export function getContext(){
 
 export function ContextWrapper(props){
 
+    console.log('context wrapper');
+
     const [content, setContent] = useState(0);
 
     return (<SharedContext.Provider value={{
@@ -23,9 +25,11 @@ export function ContextWrapper(props){
     </SharedContext.Provider>);
 
     function increment(){
+        console.log('increment')
         setContent(content+1);
     }
     function decrement(){
+        console.log('decrement')
         setContent(content-1);
     }
 }
